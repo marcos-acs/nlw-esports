@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../assets/bg.jpg);
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #121214;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body * {
+    font-family: 'inter', sans-serif;
+    font-size: 2rem;
+    line-height: 160%;
+}
+
+header {
+    text-align: center;
+    margin-top: 32px;
+
+    height: calc(120px + 32px);
+}
+
+
+header div {
+    width: 120px;    
+    margin: auto;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    
+    border-radius: 50%;
+
+    display: flex;
+    padding: 4px;
+
+    transition: transform .4s ease-in-out;
+}
+
+header div:hover {
+    transform: scale(1.1);
+}
+header img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+main {
+    max-width: 580px;
+    width: 90%;
+    margin: 32px auto;
+
+    display: grid;
+    gap: 24px;
+
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    color: white;
+
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    padding-top: 4px;
+    border-radius: 10px;
+
+    width: auto;
+}
+
+section h2 {
+    font-size: 24px;
+    letter-spacing: -0.47px;
+}
+
+section p {
+    font-size: 16px;
+    letter-spacing: -0.18px;
+    color: #A1A1AA;
+}
+
+section div {
+    background-color: #2A2634;
+    padding: 32px;
+    padding-top: 24px;
+    border-radius: 8px;
+}
+
+ul {
+    list-style: none;
+
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    flex-wrap: wrap;
+
+    margin-top: 24px;
+}
+
+ul li {
+    transition: transform .4s ease-in-out;
+}
+
+ul li:hover {
+    transform: scale(1.1);
+}
+
+.games-list img {
+    max-width: 90px;
+    border-radius: 8px;
+}
+
+.streamers-list img {
+    width: 70px;
+    border-radius: 50%;
+    border: 1px solid #443E54;
+}
+
+.social-lists svg {
+    width: 33px;
+    height: 32px;
+}
+
+/* animation */
+
+header div {
+    animation: fromtop .8s .2s backwards;
+}
+
+main section {
+    animation: frombottom .7s backwards;
+}
+
+main section:nth-child(1) {
+    animation-delay: 0;
+}
+
+main section:nth-child(2) {
+    animation-delay: .4s;
+}
+main section:nth-child(3) {
+    animation-delay: .8s;
+}
+
+@keyframes fromtop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes frombottom {
+    from {
+        opacity: 0;
+        transform: translate(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
